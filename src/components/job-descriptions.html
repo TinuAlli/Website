@@ -1,0 +1,467 @@
+<section
+  class="px-4 pt-6 pb-6 mx-auto max-w-screen-4xl md:pb-16 sm:px-6 lg:px-8 bg-gray-100"
+>
+  <div class="flex justify-center items-center">
+    <p class="text-3xl font-semibold">Careers</p>
+  </div>
+</section>
+
+<section>
+  <div class="bg-gray-100 justify-center">
+    <div>
+      <div
+        class="bg-white max-w-3xl mx-auto border border-gray-200"
+        x-data="{selected:0}"
+      >
+        <ul class="shadow-box">
+          <li class="relative border-b border-gray-200">
+            <button
+              type="button"
+              class="w-full px-8 py-6 text-left"
+              @click="selected !== 1 ? selected = 1 : selected = null"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-semibold"> Program Lead </span>
+                </div>
+                <div>
+                  <span x-show="selected == 1" class="text-2xl">-</span>
+                  <span x-show="selected !== 1" class="text-2xl">+</span>
+                </div>
+              </div>
+            </button>
+            <div
+              class="relative overflow-hidden transition-all max-h-0 duration-700"
+              style=""
+              x-ref="container1"
+              x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+            >
+              <div class="relative border bg-dark-950 my-4"></div>
+
+              <div class="p-6">
+                <p>
+                  <strong>Job Title:</strong> Program Lead (12 - 15 Months
+                  contract) Maternity Leave Coverage
+                </p>
+                <p><strong>Reports To:</strong> Executive Director</p>
+                <p><strong>Department/Group:</strong> Program Lead</p>
+                <p>
+                  <strong>Location:</strong> Work location may include your home
+                  office and the BBVA office
+                </p>
+              </div>
+              <div class="p-6 -mt-10">
+                <div class="relative border bg-dark-950 my-4"></div>
+              </div>
+              <div class="p-6 -mt-8">
+                <p class="font-semibold">Company Description</p>
+                <p>
+                  Black Business Ventures Association (BBVA) is a 100% black-led
+                  non-profit organization with a mandate to discover, educate
+                  and mentor black tech entrepreneurs to create social and
+                  economic prosperity. Our programs and services are designed
+                  and delivered through a relatable learning mechanism that is
+                  inclusive of cultural context to help entrepreneurs grow and
+                  scale their business. BBVA is launching its new Black
+                  Accelerator Program, a 3-month program designed to support
+                  black-led, early-stage, tech or technology-enabled businesses.
+                  BBVA is on a mission to help establish 1000 successful,
+                  Black-led tech and tech-enabled businesses in Canada by 2030.
+                  The vision of BBVA is to foster a vibrant Canadian technology
+                  ecosystem with significant participation by the Black
+                  community.
+                </p>
+              </div>
+              <div class="p-6 -mt-10">
+                <div class="relative border bg-dark-950 my-4"></div>
+              </div>
+              <div class="p-6 -mt-8">
+                <p class="font-semibold">Job Description</p>
+                <p class="mt-6">RESPONSIBILITIES</p>
+                <p>
+                  BBVA is recruiting for a full-time or part-time Program
+                  Specialist to support the BBVA team through strategic planning
+                  around the development of programs that will impact the Black
+                  tech entrepreneurship ecosystem. The ideal candidate is
+                  passionate about startups, technology, innovation, and Black
+                  founders. The main responsibilities are:
+                </p>
+                <ul class="list-disc p-6 -mt-4">
+                  <li>
+                    <p>
+                      Architect business foundational and tech-based accelerator
+                      programs for various cohorts
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Cultivate a network of Canadian coaches and North American
+                      based advisors
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Lead and support the overall planning and operations of
+                      BBVA’s programs
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Work alongside the BBVA team including facilitators,
+                      coaches, and mentors to ensure a successful program and
+                      coaching objectives and delivery is met
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Connect with cohort founders along their program journey
+                      to ensure mentorship, program satisfaction and resource
+                      delivery
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Ensure curriculum meets the highest standards in the tech
+                      ecosystem – liaise with facilitators to ensure effective
+                      delivery of program curriculum
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Cultivate BBVA’s additional programs including - student
+                      summer programs and women-focused tech programs
+                    </p>
+                  </li>
+                </ul>
+                <p>QUALIFICATIONS AND EDUCATION REQUIREMENTS</p>
+                <p>
+                  The ideal Program Lead will have an adept knowledge of the
+                  world of tech entrepreneurship and startups. The candidate
+                  will be detail oriented and feel comfortable cultivating
+                  processes to lead the program team. What we look for in this
+                  profile:
+                </p>
+                <ul class="list-disc p-6 -mt-4">
+                  <li>
+                    <p>
+                      Passion toward nurturing and helping Black founders
+                      succeed in the tech ecosystem
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      An excellent communicator and forward-facing team member,
+                      ready to cultivate a network and build relationships
+                      within the ecosystem
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      A solutions-oriented, creative thinker with the ability to
+                      strategically plan and execute within a team
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Excitement to directly work with tech startups in an
+                      operational or administrative capacity
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      A give-first attitude toward their community and all the
+                      individuals they interact with and a passion for helping
+                      startups become successful businesses
+                    </p>
+                  </li>
+                </ul>
+                <p>BEHAVIORAL COMPETENCIES</p>
+                <ul class="list-disc p-6 -mt-4">
+                  <li>
+                    <p>
+                      Openness to Intercultural Learning- the ability to manage
+                      biases and use curiosity to learn more about others while
+                      also learning about yourself and remaining open to
+                      feedback
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Self-Awareness - the ability to understand oneself and the
+                      impact that one’s perceptions and attitudes have on others
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Collaborative- the ability to create inclusive spaces that
+                      value, build upon, and recognize the diverse strengths and
+                      expertise of your colleagues
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Focus on outcomes and plan/drive for results- maximizing
+                      resources to achieve results that are aligned with the
+                      goals of the organization, while maintaining
+                      accountability to each other and external stakeholders
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Agility- function as a role model of how to effectively
+                      work through change and how to adapt your approach, even
+                      in times of uncertainty and ambiguity
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Lead- positively influence others to support achieving
+                      solutions to complex issues
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="relative border-b border-gray-200">
+            <button
+              type="button"
+              class="w-full px-8 py-6 text-left"
+              @click="selected !== 3 ? selected = 3 : selected = null"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-2xl font-semibold"> Program Intern </span>
+                </div>
+                <div>
+                  <span x-show="selected == 3" class="text-2xl">-</span>
+                  <span x-show="selected !== 3" class="text-2xl">+</span>
+                </div>
+              </div>
+            </button>
+
+            <div
+              class="relative overflow-hidden transition-all max-h-0 duration-700"
+              style=""
+              x-ref="container3"
+              x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+            >
+              <div class="relative border bg-dark-950 my-4"></div>
+              <div class="p-6">
+                <p><strong>Job Title:</strong> Program Intern</p>
+                <p><strong>Reports To:</strong> Program Director</p>
+                <p><strong>Department/Group:</strong> Program Services</p>
+                <p>
+                  <strong>Location:</strong> Work location may include your home
+                  office and the BBVA office
+                </p>
+              </div>
+              <div class="p-6 -mt-10">
+                <div class="relative border bg-dark-950 my-4"></div>
+              </div>
+              <div class="p-6 -mt-8">
+                <p class="font-semibold">Company Description</p>
+                <p>
+                  Black Business Ventures Association (BBVA) is a 100% black-led
+                  non-profit organization with a mandate to discover, educate
+                  and mentor black tech entrepreneurs to create social and
+                  economic prosperity. Our programs and services are designed
+                  and delivered through a relatable learning mechanism that is
+                  inclusive of cultural context to help entrepreneurs grow and
+                  scale their business. BBVA is launching its new Black
+                  Accelerator Program, a 3-month program designed to support
+                  black-led, early-stage, tech or technology-enabled businesses.
+                  BBVA is on a mission to help establish 1000 successful,
+                  Black-led tech and tech-enabled businesses in Canada by 2030.
+                  The vision of BBVA is to foster a vibrant Canadian technology
+                  ecosystem with significant participation by the Black
+                  community.
+                </p>
+              </div>
+              <div class="p-6 -mt-10">
+                <div class="relative border bg-dark-950 my-4"></div>
+              </div>
+              <div class="p-6 -mt-8">
+                <p class="font-semibold">Job Description</p>
+                <p class="mt-6">RESPONSIBILITIES</p>
+                <p>
+                  BBVA is recruiting for a full-time or full-time Program Intern
+                  to support the BBVA program team. Program Intern will assist
+                  with BBVA’s Seed Accelerator Program and community functions
+                  through research, streamlining engagement activities by
+                  identifying possible ecosystem partners, organizations, and
+                  network opportunities to increase program participation and
+                  collaboration. The ideal candidate is curious and passionate
+                  about startups, technology, innovation, and engagement. The
+                  main responsibilities are:
+                </p>
+                <ul class="list-disc p-6 -mt-4">
+                  <li>
+                    <p>Research to support the program team</p>
+                  </li>
+                  <li>
+                    <p>
+                      Support with the overall planning and operations of BBVA’s
+                      programs
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Work alongside the BBVA team to forge partnerships with
+                      ecosystem collaborators
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Assist with content and planning for live workshops and
+                      other BBVA events
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Prepare communication and outreach assets to participants
+                      and community partners for activation and promotion
+                    </p>
+                  </li>
+                  <li>
+                    <p>General administration</p>
+                  </li>
+                  <li>
+                    <p>
+                      Identify opportunities for new streamlined processes for
+                      the BBVA program offerings and cohort participation
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Collect and manage engagement metrics for improvement in
+                      attrition
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Participate in community-based events and recruitment
+                      workshops to drive application demand for BBVA programs
+                    </p>
+                  </li>
+                </ul>
+                <p>Additional advantageous skills:</p>
+                <ul class="list-disc p-6">
+                  <li>
+                    <p>
+                      Blogging skills: SEO, content writing, communication, link
+                      building
+                    </p>
+                  </li>
+                  <li>
+                    <p>Design skills: Social media content design, marketin</p>
+                  </li>
+                </ul>
+                <p>QUALIFICATIONS AND EDUCATION REQUIREMENTS</p>
+                <ul class="list-disc p-6">
+                  <li>
+                    <p>
+                      The ideal Program Intern will have an interest in learning
+                      about the world of tech entrepreneurship and startups. The
+                      candidate will be detail oriented and feel comfortable
+                      supporting processes to assist the program team. The ideal
+                      candidate will assist with community engagement work,
+                      research, administrative tasks, and more. An overall
+                      curiosity and willingness to learn new things and delve
+                      into new practices will be key in thriving in this role
+                    </p>
+                  </li>
+                </ul>
+                <p>What we look for in a profile:</p>
+                <ul class="list-disc p-6">
+                  <li>
+                    <p>
+                      Strong verbal and written communication skills for
+                      continued interactions with external stakeholders
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Demonstrates an openness to learn and an excitement to
+                      support the startup community
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Excitement to directly work with tech startups in an
+                      operational or administrative capacit
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      A give-first attitude toward their community and all the
+                      individuals they interact with and a passion for helping
+                      startups become successful businesses
+                    </p>
+                  </li>
+                </ul>
+                <p>BEHAVIORAL COMPETENCIES</p>
+                <ul class="list-disc p-6">
+                  <li>
+                    <p>
+                      Openness to Intercultural Learning- the ability to manage
+                      biases and use curiosity to learn more about others while
+                      also learning about yourself and remaining open to
+                      feedback
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Self-Awareness - the ability to understand oneself and the
+                      impact that one’s perceptions and attitudes have on others
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Focus on outcomes and plan/drive for results- maximizing
+                      resources to achieve results that are aligned with the
+                      goals of the organization, while maintaining
+                      accountability to each other and external stakeholders
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Agility- function as a role model of how to effectively
+                      work through change and how to adapt your approach, even
+                      in times of uncertainty and ambiguity
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Lead- positively influence others to support achieving
+                      solutions to complex issues
+                    </p>
+                  </li>
+                </ul>
+                <p>WORK ENVIRONMENT</p>
+                <p>
+                  This is a part-time or full-time position that may work in the
+                  BBVA office and working at home. The hours of work are
+                  primarily between 8:30AM-4:30PM but can be flexible to fit a
+                  student-centric schedule.
+                </p>
+                <p class="mt-4">APPLY</p>
+                <p>Apply to: hr@blackventures.ca</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="flex justify-center items-center my-6">
+        <a
+          class="flex justify-center items-center py-6 px-8 w-auto h-8 text-2xl font-semibold leading-snug bg-black rounded-full transition ease-in-out duration-250 text-dark-900 hover:text-black focus:outline-none hover:bg-dark-900"
+          href="jobapply.html"
+        >
+          Apply
+        </a>
+      </div>
+      <div class="h-4 m-4 bg-gray-100"></div>
+    </div>
+  </div>
+</section>
