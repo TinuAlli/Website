@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BBVA - Mwanzo</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <include src="./components/analytics.html" />
+    <include src="./components/accelerator-style.html" />
+  </head>
+  <body class="overflow-x-hidden relative" x-data>
+    <!-- Site header -->
+    <header class="bg-dark-900">
+      <include src="./components/navigation.html" />
+    </header>
+
+    <!-- Page content -->
+    <main class="bg-dark-900">
+      <!-- Featured work wrapper -->
+      <include src="./components/hero-home 3.html" />
+
+      <include src="./components/foundation-problem.html" />
+
+      <include src="./components/foundation-description.html" />
+
+      <include src="./components/foundation-included.html" />
+
+      <!-- display on big screen -->
+      <div class="hidden md:block">
+        <include src="./components/foundation-course.html" />
+      </div>
+
+      <!-- display on screen -->
+      <div class="md:hidden">
+        <include src="./components/foundation-course-mobile.html" />
+      </div>
+
+      <include src="./components/foundation-features.html" />
+
+      <include src="./components/foundation-eligibility.html" />
+
+      <include src="./components/foundation-image.html" />
+
+      <include src="./components/foundation-apply.html" />
+
+      <include src="./components/foundation-faq.html" />
+
+      <include src="./components/foundation-partners.html" />
+    </main>
+
+    <!-- Site footer -->
+    <include src="./components/footer.html" />
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

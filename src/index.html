@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BBVA - Home</title>
+
+    <include src="./components/analytics.html" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8c4d2bae4d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="overflow-x-hidden relative">
+    <!-- Site header -->
+    <header class="bg-dark-900">
+      <include src="./components/navigation.html" />
+    </header>
+
+    <!-- Page content -->
+    <main class="bg-dark-900">
+      <!-- Hero section -->
+      <include src="./components/hero-home.html" />
+
+      <!-- Partners section -->
+      <include src="./components/mid-section-home.html" />
+
+      <!-- CTA -->
+      <include src="./components/cta.html" />
+    </main>
+
+    <!-- Site footer -->
+    <include src="./components/footer.html" />
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
