@@ -1,0 +1,76 @@
+---
+layout: default
+pagination:
+  sort_reverse: true
+  enabled: true
+  per_page: 10
+---
+
+<!-- Just some nice to have styles for the pager buttons -->
+<style>
+  ul.pager {
+    text-align: center;
+    list-style: none;
+  }
+  ul.pager li {
+    display: inline;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+  }
+</style>
+
+<div class="container w-full md:max-w-3xl sm:px-6 mx-auto pt-10">
+  <div class="mx-auto max-w-screen-xl">
+    <section>
+      <div>
+        <h1
+          class="post-title mt-6 text-4xl font-extrabold text-left text-white sm:text-5xl md:text-6xl p-8"
+        >
+          {{page.autopages.display_name | capitalize}}
+        </h1>
+      </div>
+    </section>
+
+    {{ content | markdownify }}
+
+    <section>
+      <div class="posts relative mt-8 px-10">
+        {% for post in paginator.posts %}
+
+        <article class="flex flex-col space-y-4">
+          <!-- Article Image -->
+          <a href="/blog{{ post.url }}" class="hover:opacity-75">
+            <img
+              src="{{ post.feature-image }}"
+              class="img-responsive align-middle object-cover h-48 w-full"
+            />
+          </a>
+          <div class="bg-white flex flex-col justify-start p-6">
+            <a href="/blog{{ post.url }}" class="text-dark-600 text-sm pb-4">
+              {% for category in post.category %} {{ category | capitalize }}{%
+              if forloop.last %}{% else %} | {% endif %} {% endfor %}
+            </a>
+            <a
+              href="/blog{{ post.url }}"
+              class="text-3xl font-bold hover:text-gray-700 pb-5 mt-5"
+              >{{ post.title }}</a
+            >
+            <p href="/blog{{ post.url }}" class="text-sm pb-5 mt-5">
+              By
+              <a href="#" class="font-semibold hover:text-gray-800"
+                >{{ post.author }}</a
+              >, Published on {{ post.date | date_to_string }}
+            </p>
+            <a href="/blog{{ post.url }}" class="pb-6 mt-5"
+              >{{ post.excerpt }} ...</a
+            >
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% include pagination-link.html %}
+  </div>
+</div>

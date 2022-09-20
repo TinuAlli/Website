@@ -1,0 +1,67 @@
+---
+layout: default
+comments: true
+---
+
+<article itemscope itemtype="http://schema.org/BlogPosting" class="post hentry">
+  <!-- Hero section -->
+  <!-- <div class='px-4 pt-12 pb-10 md:pt-16 md:pb-20 sm:px-6 lg:px-8 bg-dark-900 lg:pb-64'> -->
+  <div
+    class="container w-full md:max-w-3xl px-10 pb-10 pt-20 sm:pb-10 sm:px-10 mx-auto sm:pt-20 markdown"
+  >
+    <div class="mx-auto max-w-screen-xl p-4">
+      <!-- Title header -->
+      <section>
+        <div>
+          <h1
+            class="post-title mt-6 text-4xl font-extrabold text-left text-black sm:text-5xl md:text-6xl"
+          >
+            {{ page.title }}
+          </h1>
+          <p
+            class="post-date inline-flex justify-left py-2 text-sm font-medium tracking-wide text-white from-dark-600 to-dark-700"
+          >
+            {{page.author}} - {{ page.date | date_to_string }}
+          </p>
+        </div>
+      </section>
+
+      
+      {% if page.feature-image and page.feature-image != "" and page.feature-image != nil %}
+        <!-- Feature Image header -->
+        <section>
+          <div class="flex justify-center mb-4">
+            <img
+              itemprop="image"
+              src="{{ page.feature-image }}"
+              class="img-responsive"
+              alt="featured "
+            />
+          </div>
+        </section>
+
+        <hr />
+      {% endif %}
+
+      <!-- Hero content -->
+      <section itemprop="articleBody">
+        <div class="relative mt-6 md:mt-8 lg:mt-12 xl:mt-16">
+          <div class="max-w-lg text-base lg:mx-auto sm:max-w-3xl">
+            {{ content }}
+          </div>
+        </div>
+      </section>
+
+      <!-- share buttons -->
+      <div>{% include share_buttons.html %}</div>
+    </div>
+  </div>
+</article>
+
+<div
+  class="container w-full md:max-w-3xl px-10 pb-10 pt-20 sm:pb-10 sm:px-10 mx-auto -mt-10 p-4"
+>
+  {% include comments.html %}
+</div>
+
+<meta itemprop="url" content="{{ site.baseurl }}{{ post.url }}" />

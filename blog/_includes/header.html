@@ -1,0 +1,332 @@
+<!-- Site header -->
+<header class="bg-dark-900">
+  <nav class="flex items-center px-4 pt-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center w-full">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <!-- Large logo -->
+        <a href="/" class="block text-2xl font-black md:hidden lg:block group">
+          <img
+            class="object-cover h-20 w-full"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAAB4CAYAAAA9vSSqAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAsSwAALEsBpT2WqQAABF9pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkJz8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0nYWRvYmU6bnM6bWV0YS8nPgo8cmRmOlJERiB4bWxuczpyZGY9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMnPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6QXR0cmliPSdodHRwOi8vbnMuYXR0cmlidXRpb24uY29tL2Fkcy8xLjAvJz4KICA8QXR0cmliOkFkcz4KICAgPHJkZjpTZXE+CiAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9J1Jlc291cmNlJz4KICAgICA8QXR0cmliOkNyZWF0ZWQ+MjAyMS0wOS0yMDwvQXR0cmliOkNyZWF0ZWQ+CiAgICAgPEF0dHJpYjpFeHRJZD5iYjVjM2JhNC1lMDBlLTRmYzQtODc2OC03M2Q3NTE5YWE3YzY8L0F0dHJpYjpFeHRJZD4KICAgICA8QXR0cmliOkZiSWQ+NTI1MjY1OTE0MTc5NTgwPC9BdHRyaWI6RmJJZD4KICAgICA8QXR0cmliOlRvdWNoVHlwZT4yPC9BdHRyaWI6VG91Y2hUeXBlPgogICAgPC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L0F0dHJpYjpBZHM+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOmRjPSdodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyc+CiAgPGRjOnRpdGxlPgogICA8cmRmOkFsdD4KICAgIDxyZGY6bGkgeG1sOmxhbmc9J3gtZGVmYXVsdCc+ODUgKiA0MDwvcmRmOmxpPgogICA8L3JkZjpBbHQ+CiAgPC9kYzp0aXRsZT4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRp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"
+          />
+        </a>
+
+        <!-- Small logo for mobile screens -->
+        <a href="/" class="hidden text-3xl font-black md:block lg:hidden group">
+          <img
+            class="object-cover h-20 w-full"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAAB4CAYAAAA9vSSqAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAsSwAALEsBpT2WqQAABF9pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkJz8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0nYWRvYmU6bnM6bWV0YS8nPgo8cmRmOlJERiB4bWxuczpyZGY9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMnPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6QXR0cmliPSdodHRwOi8vbnMuYXR0cmlidXRpb24uY29tL2Fkcy8xLjAvJz4KICA8QXR0cmliOkFkcz4KICAgPHJkZjpTZXE+CiAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9J1Jlc291cmNlJz4KICAgICA8QXR0cmliOkNyZWF0ZWQ+MjAyMS0wOS0yMDwvQXR0cmliOkNyZWF0ZWQ+CiAgICAgPEF0dHJpYjpFeHRJZD5iYjVjM2JhNC1lMDBlLTRmYzQtODc2OC03M2Q3NTE5YWE3YzY8L0F0dHJpYjpFeHRJZD4KICAgICA8QXR0cmliOkZiSWQ+NTI1MjY1OTE0MTc5NTgwPC9BdHRyaWI6RmJJZD4KICAgICA8QXR0cmliOlRvdWNoVHlwZT4yPC9BdHRyaWI6VG91Y2hUeXBlPgogICAgPC9yZGY6bGk+CiAgIDwvcmRmOlNlcT4KICA8L0F0dHJpYjpBZHM+CiA8L3JkZjpEZXNjcmlwdGlvbj4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOmRjPSdodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyc+CiAgPGRjOnRpdGxlPgogICA8cmRmOkFsdD4KICAgIDxyZGY6bGkgeG1sOmxhbmc9J3gtZGVmYXVsdCc+ODUgKiA0MDwvcmRmOmxpPgogICA8L3JkZjpBbHQ+CiAgPC9kYzp0aXRsZT4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRp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"
+          />
+        </a>
+      </div>
+
+      <!-- Main menu for large screens -->
+      <div
+        class="hidden md:flex justify-between items-center md:space-x-0.5 lg:space-x-2 text-xl md:text-base font-medium text-dark-300"
+      >
+        <a
+          href="/"
+          class="block py-1 px-4 rounded-full transition duration-200 ease-in-out sm:inline-block hover:text-black hover:bg-dark-700"
+        >
+          Home
+        </a>
+        <div
+          @click.away="open = false"
+          class="relative"
+          x-data="{ open: false }"
+        >
+          <button
+            @click="open = !open"
+            class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          >
+            <span>About</span>
+            <svg
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              :class="{'rotate-180': open, 'rotate-0': !open}"
+              class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div
+            x-show="open"
+            x-transition:enter="transition ease-out duration-100"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-30"
+          >
+            <div
+              class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800"
+            >
+              <a
+                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="/organization.html"
+                >Our Organization</a
+              >
+              <a
+                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="/board.html"
+                >Our Board</a
+              >
+              <a
+                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="/team.html"
+                >Our Team</a
+              >
+              <a
+                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="/partners.html"
+                >Our Partners</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          @click.away="open = false"
+          class="relative"
+          x-data="{ open: false }"
+        >
+          <button
+            @click="open = !open"
+            class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          >
+            <span>Programs</span>
+            <svg
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              :class="{'rotate-180': open, 'rotate-0': !open}"
+              class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div
+            x-show="open"
+            x-transition:enter="transition ease-out duration-100"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-30"
+          >
+            <div
+              class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800"
+            >
+              <a
+                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="/accelerator.html"
+                >Accelerator</a
+              >
+              <a
+                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="/mwanzo.html"
+                >Mwanzo</a
+              >
+            </div>
+          </div>
+        </div>
+        <a
+          href="/bbva-blog.html"
+          class="block py-1 px-4 rounded-full transition duration-200 ease-in-out sm:inline-block hover:text-black hover:bg-dark-700"
+        >
+          Blog
+        </a>
+      </div>
+
+      <div class="hidden md:block">
+        <a
+          class="flex justify-center items-center py-3 px-8 w-auto text-base font-semibold leading-snug bg-black rounded-full transition ease-in-out duration-250 text-dark-900 hover:text-black focus:outline-none hover:bg-dark-800"
+          href="/contact.html"
+        >
+          Let's talk
+        </a>
+      </div>
+
+      <!-- Mobile menu container -->
+      <div class="block md:hidden" x-data="{ open: false }">
+        <!-- Hamburger menu button -->
+        <!--
+          Toggle "hamburger-open" class based on menu state
+        -->
+        <button
+          class="relative z-50 w-6 h-5 transition duration-500 ease-in-out transform rotate-0 cursor-pointer group focus:outline-none"
+          :class="{ 'hamburger-open': open }"
+          @click="open = !open"
+        >
+          <span
+            class="block absolute top-0 left-0 w-full h-1 rounded-full opacity-100 transition duration-200 ease-in-out transform rotate-0 bg-dark-300 group-hover:bg-white"
+          ></span>
+          <span
+            class="block absolute left-0 top-2 w-full h-1 rounded-full opacity-100 transition duration-200 ease-in-out transform rotate-0 bg-dark-300 group-hover:bg-white"
+          ></span>
+          <span
+            class="block absolute left-0 top-2 w-full h-1 rounded-full opacity-100 transition duration-200 ease-in-out transform rotate-0 bg-dark-300 group-hover:bg-white"
+          ></span>
+          <span
+            class="block absolute left-0 top-4 w-full h-1 rounded-full opacity-100 transition duration-200 ease-in-out transform rotate-0 bg-dark-300 group-hover:bg-white"
+          ></span>
+        </button>
+
+        <!-- Mobile menu -->
+        <!--
+          Toggle "mobileNav-open" class based on menu state
+        -->
+        <div
+          class="hidden absolute top-0 left-0 z-40 justify-center items-center w-screen h-screen bg-gradient-to-tr from-dark-800 to-dark-900"
+          :class="{ 'mobileNav-open': open }"
+          @keydown.escape.window="open = false"
+        >
+          <div
+            class="flex flex-col justify-evenly items-center p-4 mx-auto space-y-8 w-full text-xl"
+          >
+            <a
+              href="/index.html"
+              class="block py-2 px-6 font-medium rounded-full transition duration-200 ease-in-out text-dark-300 hover:text-black hover:bg-dark-700 sm:inline-block"
+            >
+              Home
+            </a>
+            <div
+              @click.away="open = false"
+              class="relative"
+              x-data="{ open: false }"
+            >
+              <a
+                @click="open = !open"
+                class="items-center w-full px-4 py-2 mt-2 font-medium rounded-full text-dark-300 hover:text-black hover:bg-dark-700 sm:inline-block"
+                href="#"
+              >
+                <span>About Us</span>
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  :class="{'rotate-180': open, 'rotate-0': !open}"
+                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <div
+                x-show="open"
+                x-transition:enter="transition ease-out duration-100"
+                x-transition:enter-start="transform opacity-0 scale-95"
+                x-transition:enter-end="transform opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-75"
+                x-transition:leave-start="transform opacity-100 scale-100"
+                x-transition:leave-end="transform opacity-0 scale-95"
+                class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-50"
+              >
+                <div
+                  class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800"
+                >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="/organization.html"
+                    >Our Organization</a
+                  >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="/board.html"
+                    >Our Board</a
+                  >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="/team.html"
+                    >Our Team</a
+                  >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="/partners.html"
+                    >Our Partners</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              @click.away="open = false"
+              class="relative"
+              x-data="{ open: false }"
+            >
+              <a
+                @click="open = !open"
+                class="items-center w-full px-4 py-2 mt-2 font-medium rounded-full text-dark-300 hover:text-black hover:bg-dark-700 sm:inline-block"
+                href="#"
+              >
+                <span>Programs</span>
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  :class="{'rotate-180': open, 'rotate-0': !open}"
+                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <div
+                x-show="open"
+                x-transition:enter="transition ease-out duration-100"
+                x-transition:enter-start="transform opacity-0 scale-95"
+                x-transition:enter-end="transform opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-75"
+                x-transition:leave-start="transform opacity-100 scale-100"
+                x-transition:leave-end="transform opacity-0 scale-95"
+                class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-50"
+              >
+                <div
+                  class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800"
+                >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="/accelerator.html"
+                    >Accelerator</a
+                  >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-black dark-mode:hover:text-black dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="/mwanzo.html"
+                    >Mwanzo</a
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              href="/bbva-blog.html"
+              class="block py-2 px-6 font-medium rounded-full transition duration-200 ease-in-out text-dark-300 hover:text-black hover:bg-dark-700 sm:inline-block"
+            >
+              Blog
+            </a>
+
+            <a
+              class="flex justify-center items-center py-4 px-8 w-auto text-lg font-semibold leading-snug bg-black rounded-full transition ease-in-out duration-250 text-dark-900 hover:text-black focus:outline-none hover:bg-dark-700"
+              href="/contact.html"
+            >
+              Let's talk
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

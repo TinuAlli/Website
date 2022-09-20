@@ -1,0 +1,33 @@
+<head>
+  <meta charset="utf-8" />
+
+  <title>
+    {% if page.title %} {{ page.title }} &middot; {{ site.title }} {% else %} {{
+    site.title }} &middot; {{ site.tagline }} {% endif %}
+  </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-VJ0KMG1KWG"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-VJ0KMG1KWG");
+  </script>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="{{page.excerpt | truncate: 160 }}" />
+  <link rel="icon" href="/images/favicons/favicon.png" />
+  <script defer src="/js/app.js"></script>
+  <link href="/css/app.css" rel="stylesheet" />
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+</head>
